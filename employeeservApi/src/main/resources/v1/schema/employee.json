@@ -2,6 +2,7 @@
   "title": "Employee resource",
   "description": "Employee resource object",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "id": {
       "description": "employee id",
@@ -18,10 +19,41 @@
       "type": "string",
       "minLength": 1,
       "maxLength": 255
+    },
+    "date_of_birth": {
+      "description": "birth date of employee",
+      "type": "string",
+      "format": "date",
+      "customPattern": "yyyy-MM-dd"
+    },
+    "address_line1": {
+      "description": "line1",
+      "type": "string"
+    },
+    "address_line2": {
+      "description": "line2",
+      "type": "string"
+    },
+    "address_city": {
+      "description": "city",
+      "type": "string"
+    },
+    "address_state": {
+      "description": "state",
+      "type": "string"
+    },
+    "address_country": {
+      "description": "country",
+      "type": "string"
+    },
+    "address_zip_code": {
+      "description": "zip_code",
+      "type": "integer"
     }
   },
   "required": [
     "first_name",
-    "last_name"
+    "last_name",
+    "date_of_birth"
   ]
 }
